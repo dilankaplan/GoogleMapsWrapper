@@ -1,0 +1,11 @@
+{
+    "/belib/*":{
+        "targer":"https://belib.paris/api/infra/location?acceptExternalCpos=true",
+        "secure":false,
+        "logLevel":"debug",
+        "changeOrigin":true,
+        "pathRewrite":{
+            "^/belib":""
+        }
+    }
+}

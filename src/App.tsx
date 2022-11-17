@@ -1,58 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
+import React, { Children } from 'react';
 import './App.css';
+import { Wrapper } from '@googlemaps/react-wrapper';
+import MapL from './MapL';
+import Marker from './Marker';
 
 function App() {
+  const center ={ lat: 48.864716, lng:2.349014};
+  const zoom =  12 ;
+  const position = [
+    {lat: 49, lng: 2.4},
+    center,
+    {lat: 48.9, lng:2.35},
+  
+  ];
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className="App-link"
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className="App-link"
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
-      </header>
-    </div>
+<Wrapper apiKey={"AIzaSyA91K3Vg2JSVKT7soDXik5Kk5eeOceaXxQ"}>
+<MapL center= {center} zoom={zoom} >
+  {position.map((position) => (<Marker position={position} /> ))}
+</ MapL>
+</Wrapper>
   );
 }
-
 export default App;
