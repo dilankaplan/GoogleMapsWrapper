@@ -6,7 +6,7 @@ const [charger, setCharger] = useState([])
 
 useEffect(() => {
     fetch("https://belib.paris/api/infra/location?acceptExternalCpos=true?key=AIzaSyA91K3Vg2JSVKT7soDXik5Kk5eeOceaXxQ")
-    .then(response => response.json())
+    .then(response => response.json()) 
     .then(data => console.log(data) )
     .catch(error =>console.log(error));
  }, []);
