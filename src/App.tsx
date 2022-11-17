@@ -9,7 +9,7 @@ function App() {
   const zoom =  12 ;
   const position = [
     {lat: 49, lng: 2.4},
-    center,
+    center, 
     {lat: 48.9, lng:2.35},
   
   ];
