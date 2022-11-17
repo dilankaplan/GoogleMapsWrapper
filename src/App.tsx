@@ -7,7 +7,7 @@ import Marker from './components/Marker';
 function App() {
   const center ={ lat: 48.864716, lng:2.349014};
   const zoom =  12 ;
-  const position = [
+  const position = [   
     {lat: 49, lng: 2.4},
     center, 
     {lat: 48.9, lng:2.35},
