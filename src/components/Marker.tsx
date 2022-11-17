@@ -10,7 +10,7 @@ import { useEffect, useState  } from "react";
           ){
      console.log({position})
      const [marker, setMarker] = useState<google.maps.Marker  | null>(null);
-     const [selectedMarker, setSelectedMarker] = useState("");
+    //  const [selectedMarker, setSelectedMarker] = useState("");
          useEffect(() =>{
        setMarker(new google.maps.Marker({}));
     }, []);

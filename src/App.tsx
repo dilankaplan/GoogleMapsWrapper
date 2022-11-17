@@ -1,8 +1,8 @@
 import React, { Children } from 'react';
 import './App.css';
 import { Wrapper } from '@googlemaps/react-wrapper';
-import MapL from './MapL';
-import Marker from './Marker';
+import MapL from './components/MapL';
+import Marker from './components/Marker';
 
 function App() {
   const center ={ lat: 48.864716, lng:2.349014};
